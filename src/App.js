@@ -52,7 +52,7 @@ function App() {
     return <main>
       <div className="title">
         <h2>No tours left</h2>
-        {/* Basically refreshes our tours state, regenerating all items in the array */}
+        {/* Button refreshes our tours state, regenerating all items in the array */}
         <button className="btn" onClick={fetchTours}>Refresh</button>
       </div>
     </main>
