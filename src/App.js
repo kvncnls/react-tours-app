@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Loading from './Loading'
 import Tours from './Tours'
 
-const url = 'https://course-api.com/react-tours-project'
+const url = 'https://course-api.com/react-tours-project';
+
+console.clear();
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -25,13 +27,11 @@ function App() {
       const tours = await response.json();
       // Here we are placing the tours data into the setTours state function.
       setTours(tours);
-      console.log(tours);
       // We set loading to false because we've attempted to retrieve our data
       setLoading(false);
     } catch (error) {
       // We set loading to false because we've attempted to retrieve our data
       setLoading(false);
-      console.log(error)
     }
   }
 
